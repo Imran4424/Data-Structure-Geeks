@@ -23,6 +23,8 @@ void Rotation(int arr[], int aSize, int nTimes)
 	}
 
 	arr[aSize - 1] = store;
+
+	Rotation(arr, aSize, nTimes - 1);
 }
 
 
