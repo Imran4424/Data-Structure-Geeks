@@ -9,7 +9,7 @@ using namespace std;
 
 void Rotation(int arr[], int aSize)
 {
-	int store = a[0];
+	int store = arr[0];
 
 	for (int i = 0; i < aSize - 1; ++i)
 	{
@@ -56,9 +56,9 @@ int main(int argc, char const *argv[])
 
 	int arr[aSize];
 
-	ReadArray(int arr, int aSize);
+	ReadArray(arr, aSize);
 
-	Display();
+	Display(arr, aSize);
 
 	cout << "how many elements" << endl;
 
@@ -67,7 +67,7 @@ int main(int argc, char const *argv[])
 
 	RotationHelper(arr, aSize, nTimes);
 
-	Display();
+	Display(arr, aSize);
 
 	return 0;
 }
