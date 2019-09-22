@@ -7,12 +7,23 @@
 #include <iostream>
 using namespace std;
 
+void ReadArray(int arr[], int aSize)
+{
+	cout << "enter the " << aSize << " elements of the array" << endl;
+
+}
+
 int main(int argc, char const *argv[])
 {
 	cout << "enter the size of the array" << endl;
 
 	int aSize;
 	cin >> aSize;
+
+	int arr[aSize];
+
+	ReadArray(int arr, int aSize);
+
 
 	return 0;
 }
