@@ -7,6 +7,8 @@
 #include <iostream>
 using namespace std;
 
+// simple implementation of euclid rule
+
 int GCD(int a, int b)
 {
 	if (0 == b)
@@ -20,25 +22,12 @@ int GCD(int a, int b)
 
 void Rotation(int arr[], int aSize, int nTimes)
 {
-	int storage[nTimes];
+	int stopPoint  = GCD(aSize, nTimes);
 
-	for (int i = 0; i < nTimes; ++i)
+	for (int i = 0; i < stopPoint; ++i)
 	{
-		storage[i] = arr[i];
+		int store = arr[i];
 	}
-
-	for (int i = 0; i < aSize - nTimes; ++i)
-	{
-		arr[i] = arr[i + nTimes];
-	}
-
-	int k = 0;
-
-	for (int i = aSize - nTimes; i < aSize; ++i)
-	{
-		arr[i] = storage[k++];
-	}
-
 }
 
 
