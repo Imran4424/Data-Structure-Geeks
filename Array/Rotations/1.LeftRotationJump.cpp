@@ -9,22 +9,25 @@ using namespace std;
 
 void Rotation(int arr[], int aSize, int nTimes)
 {
-	// base cases
-	if (0 == nTimes)
+	int storage[nTimes];
+
+	for (int i = 0; i < nTimes; ++i)
 	{
-		return;
+		storage[i] = arr[i];
 	}
 
-	int store = arr[0];
-
-	for (int i = 0; i < aSize - 1; ++i)
+	for (int i = 0; i < aSize - nTimes; ++i)
 	{
-		arr[i] = arr[i+1];
+		arr[i] = arr[i + nTimes];
 	}
 
-	arr[aSize - 1] = store;
+	int k = 0;
 
-	Rotation(arr, aSize, nTimes - 1);
+	for (int i = aSize - nTimes; i < aSize; ++i)
+	{
+		arr[i] = storage[k++];
+	}
+
 }
 
 
